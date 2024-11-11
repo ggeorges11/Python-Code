@@ -1,0 +1,32 @@
+#create the function to calculate the average score
+def average_score(s1, n1):
+    result = s1 / n1
+    return result
+
+#create the function to calculate the grade
+def establish_score(n):
+    if n >= 80:
+        result2 = "Grade A"
+    elif n >= 60 and n < 80:
+        result2 = "Grade B"
+    elif n >= 50 and n < 60:
+        result2 = "Grade C"
+    else:
+        result2 = "Grade D"
+    return result2
+
+
+# program
+scores = [55, 75, 85, 95, 75, 95, 90, 55, 95]
+sum1 = sum(scores)
+number1 = len(scores)
+average = average_score(sum1, number1)
+grade = establish_score(average)
+
+print(f"Your average score is {average}: ")
+print(f"Your grade is {grade}: ")
+
+#Grade A if the average score is equal to or above 80
+#Grade B if the average score is equal to or above 60 and less than 80
+#Grade C if the average score is equal to or above 50 and less than 60
+#Grade F if the average score is less than 50
